@@ -10,7 +10,14 @@ const featuresData = [
 
 <section class='features'>
   <div class='container'>
-    {featuresData.map((feature) => <Card title={feature.title} body={feature.body} />)}
+    {
+      featuresData.map((feature) => (
+        <Card>
+          <h3>{feature.title}</h3>
+          <p>{feature.body}</p>
+        </Card>
+      ))
+    }
   </div>
 </section>
 
@@ -24,8 +31,8 @@ const featuresData = [
   }
 
   @media (max-width: 500px) {
-  .features .container {
-    grid-template-columns: 1fr;
+    .features .container {
+      grid-template-columns: 1fr;
+    }
   }
-}
 </style>
